@@ -1,0 +1,1 @@
+SELECT city, SUM(rent) As City_Rent , (select sum(rent) from Tenancy_histories) As Total_Rent From Addresses a Full Join Tenancy_histories t On a.house_id = t.house_id group by city

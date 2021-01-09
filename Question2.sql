@@ -1,0 +1,1 @@
+select profile_id, first_name+ ' '+ last_name as Full_Name , phone from dbo.Profiles where profile_id in (SELECT profile_id from dbo.Tenancy_histories where rent >= 9000) 
